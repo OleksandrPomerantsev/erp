@@ -1,3 +1,3 @@
-from . import biblioaj_llibre
-from . import biblioaj_editorial
-from . import biblioaj_autor
+from . import zoo_animal
+from . import zoo_especie
+from . import zoo_zoo
