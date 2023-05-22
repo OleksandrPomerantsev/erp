@@ -37,7 +37,6 @@
             <field name="type">tree</field>
             <field name="arch" type="xml">
                 <tree string="Aeroport">
-                    <field name="codi"/>
                     <field name="nom"/>
                     <field name="ciutat"/>
                     <field name="pais"/>		
@@ -51,7 +50,6 @@
             <field name="type">tree</field>
             <field name="arch" type="xml">
                 <tree string="Vol">
-                    <field name="codi"/>
                     <field name="passatgers"/>
                     <field name="dataSortida"/>
                     <field name="dataArrivada"/>	
@@ -64,7 +62,6 @@
             <field name="type">tree</field>
             <field name="arch" type="xml">
                 <tree string="Avio">
-                    <field name="codi"/>
                     <field name="marca"/>
                     <field name="model"/>
                     <field name="maxVel"/>	
@@ -77,7 +74,6 @@
             <field name="type">tree</field>
             <field name="arch" type="xml">
                 <tree string="Pilot">
-                    <field name="codi"/>
                     <field name="nom"/>
                     <field name="cognoms"/>	
                 </tree>

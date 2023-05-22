@@ -9,4 +9,4 @@ class plane_avio(models.Model):
 
     def _get_name(self):
         for record in self:
-            record.name = str(record.nom) + " " + str(record.cognom)
+            record.name = str(record.marca) + " " + str(record.model)

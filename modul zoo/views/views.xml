@@ -30,7 +30,6 @@
             <field name="type">tree</field>
             <field name="arch" type="xml">
                 <tree string="Zoo">
-                    <field name="codi"/>
                     <field name="nom"/>
                     <field name="ciutat"/>
                     <field name="pais"/>
@@ -45,11 +44,9 @@
             <field name="type">tree</field>
             <field name="arch" type="xml">
                 <tree string="Animal">
-                    <field name="codi"/>
                     <field name="sexe"/>
                     <field name="dataNaix"/>
-                    <field name="paisOrgen"/>
-                    <field name="pais"/>
+                    <field name="paisOrigen"/>
                     <field name="continentOrigen"/>		
                 </tree>
             </field>
@@ -60,7 +57,6 @@
             <field name="type">tree</field>
             <field name="arch" type="xml">
                 <tree string="Especie">
-                    <field name="codi"/>
                     <field name="nomVulgar"/>
                     <field name="nomCientific"/>
                     <field name="perill"/>

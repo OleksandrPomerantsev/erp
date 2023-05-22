@@ -11,4 +11,4 @@ class plane_aeroport(models.Model):
 
     def _get_name(self):
         for record in self:
-            record.name = str(record.nom) + " " + str(record.cognom)
+            record.name = str(record.nom)
