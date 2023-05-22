@@ -44,6 +44,23 @@
             </field>
 	    </record>
 
+        <record model="ir.ui.view" id="view_plane_aeroport_form">
+            <field name="name">plane_aeroport</field>
+            <field name="model">plane.aeroport</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Form Aeroport">
+                    <field name="nom" colspan="4"/>
+                    <field name="latitud" colspan="4" readonly="1"/>
+                    <field name="longitud" colspan="4" readonly="1"/>
+                    <field name="volsDesti_ids" colspan="4" readonly="1"/>
+                    <field name="volsOrigen_ids" colspan="4" readonly="1"/>
+                    <field name="ciutat" colspan="4"/>
+                    <field name="pais" colspan="4"/>		
+                </form>
+            </field>
+	    </record>
+
         <record model="ir.ui.view" id="view_plane_vol_tree">
             <field name="name">plane_vol</field>
             <field name="model">plane.vol</field>
@@ -56,6 +73,24 @@
                 </tree>
             </field>
 	    </record>
+
+        <record model="ir.ui.view" id="view_plane_vol_form">
+            <field name="name">plane_vol</field>
+            <field name="model">plane.vol</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Form Vol">
+                    <field name="avioDesti" colspan="4" readonly="1"/>
+                    <field name="avioOrigen" colspan="4" readonly="1"/>
+                    <field name="pilot_id" colspan="4"/>
+                    <field name="avio_id" colspan="4"/>
+                    <field name="passatgers" colspan="4" readonly="1"/>
+                    <field name="dataSortida" colspan="4"/>
+                    <field name="dataArrivada" colspan="4"/>	
+                </form>
+            </field>
+	    </record>
+
         <record model="ir.ui.view" id="view_plane_avio_tree">
             <field name="name">plane_avio</field>
             <field name="model">plane.avio</field>
@@ -68,7 +103,22 @@
                 </tree>
             </field>
 	    </record>
-         <record model="ir.ui.view" id="view_plane_pilot_tree">
+
+        <record model="ir.ui.view" id="view_plane_avio_form">
+            <field name="name">plane_avio</field>
+            <field name="model">plane.avio</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Form Avio">
+                    <field name="marca" colspan="4" readonly="1"/>
+                    <field name="model" colspan="4" readonly="1"/>
+                    <field name="maxVel" colspan="4"/>
+                    <field name="vol_ids" colspan="4" readonly="1"/>	
+                </form>
+            </field>
+	    </record>
+
+        <record model="ir.ui.view" id="view_plane_pilot_tree">
             <field name="name">plane_pilot</field>
             <field name="model">plane.pilot</field>
             <field name="type">tree</field>
@@ -77,6 +127,22 @@
                     <field name="nom"/>
                     <field name="cognoms"/>	
                 </tree>
+            </field>
+	    </record>
+
+        <record model="ir.ui.view" id="view_plane_pilot_form">
+            <field name="name">plane_pilot</field>
+            <field name="model">plane.pilot</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Form Pilot">
+                    <field name="nom" colspan="4"/>
+                    <field name="cognoms" colspan="4"/>	
+                    <field name="nif" colspan="4" readonly="1"/>
+                    <field name="telf" colspan="4" readonly="1"/>
+                    <field name="email" colspan="4" readonly="1"/>
+                    <field name="vol_ids" colspan="4" readonly="1"/>
+                </form>
             </field>
 	    </record>
     </data>
