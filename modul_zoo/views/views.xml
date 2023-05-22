@@ -38,6 +38,21 @@
             </field>
 	    </record>
 
+        <record model="ir.ui.view" id="view_zoo_zoo_from">
+            <field name="name">zoo_zoo</field>
+            <field name="model">zoo.zoo</field>
+            <field name="type">from</field>
+            <field name="arch" type="xml">
+                <from string="From Zoo">
+                    <field name="nom" colspan="4"/>
+                    <field name="ciutat" colspan="4"/>
+                    <field name="animals_ids" colspan="4" readonly="1"/>
+                    <field name="pais" colspan="4"/>
+                    <field name="grandaria" colspan="4"/>		
+                </from>
+            </field>
+	    </record>
+
         <record model="ir.ui.view" id="view_zoo_animal_tree">
             <field name="name">zoo_animal</field>
             <field name="model">zoo.animal</field>
@@ -51,6 +66,23 @@
                 </tree>
             </field>
 	    </record>
+
+        <record model="ir.ui.view" id="view_zoo_animal_from">
+            <field name="name">zoo_animal</field>
+            <field name="model">zoo.animal</field>
+            <field name="type">from</field>
+            <field name="arch" type="xml">
+                <from string="From Animal">
+                    <field name="sexe" colspan="4"/>
+                    <field name="dataNaix" colspan="4"/>
+                    <field name="paisOrigen" colspan="4"/>
+                    <field name="continentOrigen" colspan="4"/>
+                    <field name="zoo_id" colspan="4" readonly="1"/>
+                    <field name="especie_id" colspan="4" readonly="1"/>	
+                </from>
+            </field>
+	    </record>
+
         <record model="ir.ui.view" id="view_zoo_especie_tree">
             <field name="name">zoo_especie</field>
             <field name="model">zoo.especie</field>
@@ -64,5 +96,21 @@
                 </tree>
             </field>
 	    </record>
+
+        <record model="ir.ui.view" id="view_zoo_especie_from">
+            <field name="name">zoo_especie</field>
+            <field name="model">zoo.especie</field>
+            <field name="type">from</field>
+            <field name="arch" type="xml">
+                <from string="From Especie">
+                    <field name="nomVulgar" colspan="4"/>
+                    <field name="nomCientific" colspan="4" readonly="1"/>
+                    <field name="perill" colspan="4"/>
+                    <field name="familia" colspan="4"/>	
+                    <field name="animals_ids" colspan="4" readonly="1"/>	
+                </from>
+            </field>
+	    </record>
+
     </data>
 </odoo>
