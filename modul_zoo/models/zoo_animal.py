@@ -6,7 +6,8 @@ class zoo_animal(models.Model):
     dataNaix = fields.Date('Data de naixament')
     paisOrigen = fields.Char('Ciutat')
     sexe = fields.Char('sexe')
-
+    zoo_id = fields.Many2one('zoo.zoo',String='Zoo')
+    especie_id = fields.Many2one('zoo.especie',String='Especie')
     def _get_name(self):
         for record in self:
             record.name = str(id)
