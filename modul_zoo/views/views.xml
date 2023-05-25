@@ -44,11 +44,17 @@
             <field name="type">form</field>
             <field name="arch" type="xml">
                 <form string="Form Zoo">
-                    <field name="nom" colspan="4"/>
-                    <field name="ciutat" colspan="4"/>
-                    <field name="animals_ids" colspan="4" readonly="1"/>
-                    <field name="pais" colspan="4"/>
-                    <field name="grandaria" colspan="4"/>		
+                    <sheet>
+                        <group col="12">
+                            <group colspan="4">
+                                <field name="nom" />
+                                <field name="ciutat" />
+                                <field name="animals_ids"/>
+                                <field name="pais" />
+                                <field name="grandaria" />	
+                            </group>
+                        </group>
+                    </sheet>	
                 </form>
             </field>
 	    </record>
@@ -73,12 +79,18 @@
             <field name="type">form</field>
             <field name="arch" type="xml">
                 <form string="Form Animal">
-                    <field name="sexe" colspan="4"/>
-                    <field name="dataNaix" colspan="4"/>
-                    <field name="paisOrigen" colspan="4"/>
-                    <field name="continentOrigen" colspan="4"/>
-                    <field name="zoo_id" colspan="4" readonly="1"/>
-                    <field name="especie_id" colspan="4" readonly="1"/>	
+                    <sheet>
+                        <group col="12">
+                            <group colspan="4">
+                                <field name="sexe"/>
+                                <field name="dataNaix"/>
+                                <field name="paisOrigen"/>
+                                <field name="continentOrigen"/>
+                                <field name="zoo_id"/>
+                                <field name="especie_id" />	
+                            </group>
+                        </group>
+                    </sheet>
                 </form>
             </field>
 	    </record>
@@ -103,11 +115,17 @@
             <field name="type">form</field>
             <field name="arch" type="xml">
                 <form string="Form Especie">
-                    <field name="nomVulgar" colspan="4"/>
-                    <field name="nomCientific" colspan="4" readonly="1"/>
-                    <field name="perill" colspan="4"/>
-                    <field name="familia" colspan="4"/>	
-                    <field name="animals_ids" colspan="4" readonly="1"/>	
+                    <sheet>
+                        <group col="12">
+                            <group colspan="4">
+                                <field name="nomVulgar"/>
+                                <field name="nomCientific" />
+                                <field name="perill"/>
+                                <field name="familia"/>	
+                                <field name="animals_ids" />
+                            </group>
+                        </group>
+                    </sheet>	
                 </form>
             </field>
 	    </record>
