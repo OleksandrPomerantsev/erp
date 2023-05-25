@@ -46,12 +46,16 @@
                 <form string="Form Zoo">
                     <sheet>
                         <group col="12">
-                            <group colspan="4">
+                            <group colspan="6">
                                 <field name="nom" />
-                                <field name="ciutat" />
-                                <field name="animals_ids"/>
+                                <field name="ciutat" />	
+                            </group>
+                            <group colspan="6">
                                 <field name="pais" />
                                 <field name="grandaria" />	
+                            </group>
+                            <group colspan="12">
+                                <field name="animals_ids"/>
                             </group>
                         </group>
                     </sheet>	
@@ -81,11 +85,15 @@
                 <form string="Form Animal">
                     <sheet>
                         <group col="12">
-                            <group colspan="4">
+                            <group colspan="6">
                                 <field name="sexe"/>
                                 <field name="dataNaix"/>
+                            </group>
+                            <group colspan="6">
                                 <field name="paisOrigen"/>
                                 <field name="continentOrigen"/>
+                            </group>
+                            <group colspan="12">
                                 <field name="zoo_id"/>
                                 <field name="especie_id" />	
                             </group>
@@ -117,11 +125,15 @@
                 <form string="Form Especie">
                     <sheet>
                         <group col="12">
-                            <group colspan="4">
+                            <group colspan="6">
                                 <field name="nomVulgar"/>
                                 <field name="nomCientific" />
+                            </group>
+                            <group colspan="6">
                                 <field name="perill"/>
                                 <field name="familia"/>	
+                            </group>
+                            <group colspan="12">
                                 <field name="animals_ids" />
                             </group>
                         </group>
