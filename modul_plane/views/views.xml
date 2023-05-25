@@ -50,13 +50,19 @@
             <field name="type">form</field>
             <field name="arch" type="xml">
                 <form string="Form Aeroport">
-                    <field name="nom" colspan="4"/>
-                    <field name="latitud" colspan="4" readonly="1"/>
-                    <field name="longitud" colspan="4" readonly="1"/>
-                    <field name="volsDesti_ids" colspan="4" readonly="1"/>
-                    <field name="volsOrigen_ids" colspan="4" readonly="1"/>
-                    <field name="ciutat" colspan="4"/>
-                    <field name="pais" colspan="4"/>		
+                    <sheet>
+                        <group col="12">
+                            <group colspan="4">
+                                <field name="nom"/>
+                                <field name="latitud"/>
+                                <field name="longitud"/>
+                                <field name="volsDesti_ids"/>
+                                <field name="volsOrigen_ids"/>
+                                <field name="ciutat"/>
+                                <field name="pais"/>
+                            </group>
+                        </group>
+                    </sheet>
                 </form>
             </field>
 	    </record>
@@ -80,13 +86,19 @@
             <field name="type">form</field>
             <field name="arch" type="xml">
                 <form string="Form Vol">
-                    <field name="avioDesti" colspan="4" readonly="1"/>
-                    <field name="avioOrigen" colspan="4" readonly="1"/>
-                    <field name="pilot_id" colspan="4"/>
-                    <field name="avio_id" colspan="4"/>
-                    <field name="passatgers" colspan="4" readonly="1"/>
-                    <field name="dataSortida" colspan="4"/>
-                    <field name="dataArrivada" colspan="4"/>	
+                    <sheet>
+                        <group col="12">
+                            <group colspan="4">
+                                <field name="avioDesti"/>
+                                <field name="avioOrigen"/>
+                                <field name="pilot_id"/>
+                                <field name="avio_id"/>
+                                <field name="passatgers" />
+                                <field name="dataSortida"/>
+                                <field name="dataArrivada"/>
+                            </group>
+                        </group>
+                    </sheet>
                 </form>
             </field>
 	    </record>
@@ -110,10 +122,16 @@
             <field name="type">form</field>
             <field name="arch" type="xml">
                 <form string="Form Avio">
-                    <field name="marca" colspan="4" readonly="1"/>
-                    <field name="model" colspan="4" readonly="1"/>
-                    <field name="maxVel" colspan="4"/>
-                    <field name="vol_ids" colspan="4" readonly="1"/>	
+                    <sheet>
+                        <group col="12">
+                            <group colspan="4">
+                                <field name="marca"/>
+                                <field name="model"/>
+                                <field name="maxVel"/>
+                                <field name="vol_ids"/>
+                            </group>
+                        </group>
+                    </sheet>	
                 </form>
             </field>
 	    </record>
@@ -136,12 +154,18 @@
             <field name="type">form</field>
             <field name="arch" type="xml">
                 <form string="Form Pilot">
-                    <field name="nom" colspan="4"/>
-                    <field name="cognoms" colspan="4"/>	
-                    <field name="nif" colspan="4" readonly="1"/>
-                    <field name="telf" colspan="4" readonly="1"/>
-                    <field name="email" colspan="4" readonly="1"/>
-                    <field name="vol_ids" colspan="4" readonly="1"/>
+                    <sheet>
+                        <group col="12">
+                            <group colspan="4">
+                                <field name="nom"/>
+                                <field name="cognoms"/>	
+                                <field name="nif"/>
+                                <field name="telf"/>
+                                <field name="email"/>
+                                <field name="vol_ids"/>
+                            </group>
+                        </group>
+                    </sheet>
                 </form>
             </field>
 	    </record>
