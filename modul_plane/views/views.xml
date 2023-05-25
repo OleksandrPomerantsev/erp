@@ -52,14 +52,18 @@
                 <form string="Form Aeroport">
                     <sheet>
                         <group col="12">
-                            <group colspan="4">
+                            <group colspan="6">
                                 <field name="nom"/>
-                                <field name="latitud"/>
-                                <field name="longitud"/>
-                                <field name="volsDesti_ids"/>
-                                <field name="volsOrigen_ids"/>
                                 <field name="ciutat"/>
                                 <field name="pais"/>
+                            </group>
+                            <group colspan="6">
+                                <field name="latitud"/>
+                                <field name="longitud"/>
+                            </group>
+                            <group colspan="12">
+                                <field name="volsDesti_ids"/>
+                                <field name="volsOrigen_ids"/>
                             </group>
                         </group>
                     </sheet>
@@ -88,14 +92,18 @@
                 <form string="Form Vol">
                     <sheet>
                         <group col="12">
-                            <group colspan="4">
+                            <group colspan="6">
                                 <field name="avioDesti"/>
                                 <field name="avioOrigen"/>
-                                <field name="pilot_id"/>
-                                <field name="avio_id"/>
                                 <field name="passatgers" />
+                            </group>
+                            <group colspan="6">
                                 <field name="dataSortida"/>
                                 <field name="dataArrivada"/>
+                            </group>
+                            <group colspan="12">
+                                <field name="pilot_id"/>
+                                <field name="avio_id"/>
                             </group>
                         </group>
                     </sheet>
@@ -131,7 +139,7 @@
                             <group colspan="6">
                                 <field name="maxVel"/>
                             </group>
-                            <group colspan="6">
+                            <group colspan="12">
                                 <field name="vol_ids"/>
                             </group>
                         </group>
@@ -160,12 +168,16 @@
                 <form string="Form Pilot">
                     <sheet>
                         <group col="12">
-                            <group colspan="4">
+                            <group colspan="6">
                                 <field name="nom"/>
                                 <field name="cognoms"/>	
                                 <field name="nif"/>
+                            </group>
+                            <group colspan="6">
                                 <field name="telf"/>
                                 <field name="email"/>
+                            </group>
+                            <group colspan="12">
                                 <field name="vol_ids"/>
                             </group>
                         </group>
