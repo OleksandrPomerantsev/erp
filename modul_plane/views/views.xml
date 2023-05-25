@@ -124,10 +124,14 @@
                 <form string="Form Avio">
                     <sheet>
                         <group col="12">
-                            <group colspan="4">
+                            <group colspan="6">
                                 <field name="marca"/>
                                 <field name="model"/>
+                            </group>
+                            <group colspan="6">
                                 <field name="maxVel"/>
+                            </group>
+                            <group colspan="6">
                                 <field name="vol_ids"/>
                             </group>
                         </group>
