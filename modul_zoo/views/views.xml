@@ -4,19 +4,19 @@
 	    <record model="ir.actions.act_window" id="action_zoo_zoo_tree">
 		    <field name="name">Zoo</field>
 		    <field name="res_model">zoo.zoo</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,kanban</field>
 	    </record>
 
         <record model="ir.actions.act_window" id="action_zoo_animal_tree">
 		    <field name="name">Animal</field>
 		    <field name="res_model">zoo.animal</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,kanban</field>
 	    </record>
 
         <record model="ir.actions.act_window" id="action_zoo_especie_tree">
 		    <field name="name">Especie</field>
 		    <field name="res_model">zoo.especie</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,kanban</field>
 	    </record>
 
         <menuitem name="Zoo" id="zoo_menu" />
