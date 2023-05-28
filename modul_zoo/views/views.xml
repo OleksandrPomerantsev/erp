@@ -63,6 +63,37 @@
             </field>
 	    </record>
 
+        <record model="ir.ui.view" id="view_zoo_zoo_kanban">
+            <field name="name">zoo_zoo.kanban</field>
+            <field name="model">zoo.zoo</field>
+            <field name="type">kanban</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_content">
+                                <div class="oe_kanban_card">
+                                    <div class="oe_kanban_card_content">
+                                        <div class="oe_kanban_card_header">
+                                            <div class="oe_kanban_card_title">
+                                                <field name="nom"/>
+                                            </div>
+                                        </div>
+                                        <div class="oe_kanban_card_body">
+                                            <field name="ciutat"/>
+                                            <field name="pais"/>
+                                            <field name="grandaria"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+
         <record model="ir.ui.view" id="view_zoo_animal_tree">
             <field name="name">zoo_animal</field>
             <field name="model">zoo.animal</field>
