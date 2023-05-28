@@ -83,6 +83,7 @@
                                             <field name="ciutat"/>
                                             <field name="pais"/>
                                             <field name="grandaria"/>
+                                            <field name="animals_ids"/>
                                         </div>
                                     </div>
                                 </div>
@@ -134,6 +135,38 @@
             </field>
 	    </record>
 
+        <record model="ir.ui.view" id="view_zoo_animal_kanban">
+            <field name="name">zoo_animal.kanban</field>
+            <field name="model">zoo.animal</field>
+            <field name="type">kanban</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_content">
+                                <div class="oe_kanban_card">
+                                    <div class="oe_kanban_card_content">
+                                        <div class="oe_kanban_card_header">
+                                            <div class="oe_kanban_card_title">
+                                                <field name="sexe"/>
+                                            </div>
+                                        </div>
+                                        <div class="oe_kanban_card_body">
+                                            <field name="dataNaix"/>
+                                            <field name="paisOrigen"/>
+                                            <field name="continentOrigen"/>
+                                            <field name="zoo_id"/>
+                                            <field name="especie_id" />	
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
         <record model="ir.ui.view" id="view_zoo_especie_tree">
             <field name="name">zoo_especie</field>
             <field name="model">zoo.especie</field>
@@ -172,6 +205,38 @@
                 </form>
             </field>
 	    </record>
+
+        <record model="ir.ui.view" id="view_zoo_especie_kanban">
+            <field name="name">zoo_especie.kanban</field>
+            <field name="model">zoo.especie</field>
+            <field name="type">kanban</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_content">
+                                <div class="oe_kanban_card">
+                                    <div class="oe_kanban_card_content">
+                                        <div class="oe_kanban_card_header">
+                                            <div class="oe_kanban_card_title">
+                                                <field name="nomCientific"/>
+                                            </div>
+                                        </div>
+                                        <div class="oe_kanban_card_body">
+                                            <field name="nomVulgar"/>
+                                            <field name="perill"/>
+                                            <field name="familia"/>
+                                            <field name="animals_ids"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+        
 
     </data>
 </odoo>
