@@ -77,7 +77,7 @@
                         <t t-name="kanban-box">
                             <div class="oe_kanban_content o_kanban_record_has_image_fill">
                                 <div class="oe_kanban_card o_kanban_image d-none d-md-block" 
-                                    t-attf-style="background-image:url('#{kanban_image('plane.zoo', 'image', record.id.raw_value, placeholder)}')">
+                                    t-attf-style="background-image:url('#{kanban_image('zoo.zoo', 'image', record.id.raw_value, placeholder)}')">
                                 </div>
                                 <div class="oe_kanban_card_content">
                                     <div class="oe_kanban_card_header">
@@ -154,7 +154,7 @@
                         <t t-name="kanban-box">
                             <div class="oe_kanban_content o_kanban_record_has_image_fill">
                                 <div class="oe_kanban_card o_kanban_image d-none d-md-block" 
-                                    t-attf-style="background-image:url('#{kanban_image('plane.animal', 'image', record.id.raw_value, placeholder)}')">
+                                    t-attf-style="background-image:url('#{kanban_image('zoo.animal', 'image', record.id.raw_value, placeholder)}')">
                                 </div>
                                 <div class="oe_kanban_card_content">
                                     <div class="oe_kanban_card_header">
@@ -231,7 +231,7 @@
                         <t t-name="kanban-box">
                             <div class="oe_kanban_content o_kanban_record_has_image_fill">
                                 <div class="oe_kanban_card o_kanban_image d-none d-md-block" 
-                                    t-attf-style="background-image:url('#{kanban_image('plane.especie', 'image', record.id.raw_value, placeholder)}')">
+                                    t-attf-style="background-image:url('#{kanban_image('zoo.especie', 'image', record.id.raw_value, placeholder)}')">
                                 </div>
                                 <div class="oe_kanban_card_content">
                                     <div class="oe_kanban_card_header">
