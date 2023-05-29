@@ -5,8 +5,8 @@ class plane_vol(models.Model):
     passatgers = fields.Integer('Passatgers')
     dataSortida = fields.Datetime('DataSortida')
     dataArrivada = fields.Datetime('DataArrivada')
-    avioDesti = fields.Many2one('plane.aeroport',String='avioDesti')
-    avioOrigen = fields.Many2one('plane.aeroport',String='avioOrigen')
+    aeroportDesti = fields.Many2one('plane.aeroport',String='aeroportDesti')
+    aeroportOrigen = fields.Many2one('plane.aeroport',String='aeroportOrigen')
     pilot_id = fields.Many2one('plane.pilot',String='Pilot')
     avio_id = fields.Many2one('plane.avio',String='Avio')
     def _get_name(self):

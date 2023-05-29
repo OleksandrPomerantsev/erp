@@ -8,8 +8,8 @@ class plane_aeroport(models.Model):
     pais = fields.Char('Pais', required=True)
     latitud = fields.Float('Latitud', required=True)
     longitud = fields.Float('Longitud', required=True)
-    volsDesti_ids = fields.One2many('plane.vol','avioDesti',String='VolDesti')
-    volsOrigen_ids = fields.One2many('plane.vol','avioOrigen',String='VolOrigen')
+    aeroportDesti_ids = fields.One2many('plane.vol','aeroportDesti',String='VolDesti')
+    aeroportOrigen_ids = fields.One2many('plane.vol','aeroportOrigen',String='VolOrigen')
     def _get_name(self):
         for record in self:
             record.name = str(record.nom)

@@ -62,8 +62,8 @@
                                 <field name="longitud"/>
                             </group>
                             <group colspan="12">
-                                <field name="volsDesti_ids"/>
-                                <field name="volsOrigen_ids"/>
+                                <field name="aeroportDesti_ids"/>
+                                <field name="aeroportOrigen_ids"/>
                             </group>
                         </group>
                     </sheet>
@@ -93,8 +93,8 @@
                     <sheet>
                         <group col="12">
                             <group colspan="6">
-                                <field name="avioDesti"/>
-                                <field name="avioOrigen"/>
+                                <field name="aeroportDesti"/>
+                                <field name="aeroportOrigen"/>
                                 <field name="passatgers" />
                             </group>
                             <group colspan="6">

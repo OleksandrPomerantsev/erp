@@ -10,4 +10,4 @@ class zoo_animal(models.Model):
     especie_id = fields.Many2one('zoo.especie',String='Especie')
     def _get_name(self):
         for record in self:
-            record.name = str(id)
+            record.name = str(record.id)
