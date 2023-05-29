@@ -168,7 +168,6 @@
                                         <field name="continentOrigen"/>
                                         <field name="zoo_id"/>
                                         <field name="especie_id" />	
-                                        <img t-if="record.image" t-att-src="record.image"/>
                                     </div>
                                 </div>
                             </div>
