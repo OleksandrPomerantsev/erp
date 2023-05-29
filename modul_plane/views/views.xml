@@ -71,6 +71,40 @@
             </field>
 	    </record>
 
+        <record model="ir.ui.view" id="view_plane_aeroport_kanban">
+            <field name="name">plane_aeroport.kanban</field>
+            <field name="model">plane.aeroport</field>
+            <field name="type">kanban</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="nom"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_content">
+                                <div class="oe_kanban_card">
+                                    <div class="oe_kanban_card_content">
+                                        <div class="oe_kanban_card_header">
+                                            <div class="oe_kanban_card_title">
+                                                <field name="nom"/>
+                                            </div>
+                                        </div>
+                                        <div class="oe_kanban_card_body">
+                                            <field name="ciutat"/>
+                                            <field name="pais"/>
+                                            <field name="latitud"/>
+                                            <field name="longitud"/>
+                                            <field name="aeroportDesti_ids"/>
+                                            <field name="aeroportOrigen_ids"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
         <record model="ir.ui.view" id="view_plane_vol_tree">
             <field name="name">plane_vol</field>
             <field name="model">plane.vol</field>
@@ -111,6 +145,41 @@
             </field>
 	    </record>
 
+        <record model="ir.ui.view" id="view_plane_vol_kanban">
+            <field name="name">plane_vol.kanban</field>
+            <field name="model">plane.vol</field>
+            <field name="type">kanban</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="name"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_content">
+                                <div class="oe_kanban_card">
+                                    <div class="oe_kanban_card_content">
+                                        <div class="oe_kanban_card_header">
+                                            <div class="oe_kanban_card_title">
+                                                <field name="aeroportDesti"/>
+                                            </div>
+                                        </div>
+                                        <div class="oe_kanban_card_body">
+                                            <field name="aeroportOrigen"/>
+                                            <field name="passatgers"/>
+                                            <field name="dataSortida"/>
+                                            <field name="dataArrivada"/>
+                                            <field name="pilot_id"/>
+                                            <field name="avio_id"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+
         <record model="ir.ui.view" id="view_plane_avio_tree">
             <field name="name">plane_avio</field>
             <field name="model">plane.avio</field>
@@ -147,6 +216,38 @@
                 </form>
             </field>
 	    </record>
+
+        <record model="ir.ui.view" id="view_plane_avio_kanban">
+            <field name="name">plane_avio.kanban</field>
+            <field name="model">plane.avio</field>
+            <field name="type">kanban</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="model"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_content">
+                                <div class="oe_kanban_card">
+                                    <div class="oe_kanban_card_content">
+                                        <div class="oe_kanban_card_header">
+                                            <div class="oe_kanban_card_title">
+                                                <field name="marca"/>
+                                            </div>
+                                        </div>
+                                        <div class="oe_kanban_card_body">
+                                            <field name="model"/>
+                                            <field name="maxVel"/>
+                                            <field name="vol_ids"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
 
         <record model="ir.ui.view" id="view_plane_pilot_tree">
             <field name="name">plane_pilot</field>
@@ -185,5 +286,40 @@
                 </form>
             </field>
 	    </record>
+
+        <record model="ir.ui.view" id="view_plane_pilot_kanban">
+            <field name="name">plane_pilot.kanban</field>
+            <field name="model">plane.pilot</field>
+            <field name="type">kanban</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="nom"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_content">
+                                <div class="oe_kanban_card">
+                                    <div class="oe_kanban_card_content">
+                                        <div class="oe_kanban_card_header">
+                                            <div class="oe_kanban_card_title">
+                                                <field name="nom"/>
+                                            </div>
+                                        </div>
+                                        <div class="oe_kanban_card_body">
+                                            <field name="cognoms"/>
+                                            <field name="nif"/>
+                                            <field name="telf"/>
+                                            <field name="email"/>
+                                            <field name="vol_ids"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+
     </data>
 </odoo>
