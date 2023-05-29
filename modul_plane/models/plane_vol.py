@@ -9,6 +9,7 @@ class plane_vol(models.Model):
     aeroportOrigen = fields.Many2one('plane.aeroport',String='aeroportOrigen')
     pilot_id = fields.Many2one('plane.pilot',String='Pilot')
     avio_id = fields.Many2one('plane.avio',String='Avio')
+    image = fields.Image(string="Imagen")
     def _get_name(self):
         for record in self:
             record.name = str(record.id)

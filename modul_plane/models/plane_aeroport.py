@@ -10,6 +10,7 @@ class plane_aeroport(models.Model):
     longitud = fields.Float('Longitud', required=True)
     aeroportDesti_ids = fields.One2many('plane.vol','aeroportDesti',String='VolDesti')
     aeroportOrigen_ids = fields.One2many('plane.vol','aeroportOrigen',String='VolOrigen')
+    image = fields.Image(string="Imagen")
     def _get_name(self):
         for record in self:
             record.name = str(record.nom)

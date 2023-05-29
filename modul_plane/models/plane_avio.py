@@ -7,6 +7,7 @@ class plane_avio(models.Model):
     model = fields.Char('Model', required=True)
     maxVel = fields.Float('maxVelocitat')
     vol_ids = fields.One2many('plane.vol','avio_id',String='Avio')
+    image = fields.Image(string="Imagen")
     def _get_name(self):
         for record in self:
             record.name = str(record.marca) + " " + str(record.model)

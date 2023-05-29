@@ -70,7 +70,7 @@
             <field name="arch" type="xml">
                 <kanban>
                     <field name="name"/>
-                    <field name="image" widget="image" class="oe_kanban_image" file_path = '/modul_zoo/imagen/zoo.jpg'/>
+                    <field name="image" widget="image" class="oe_kanban_image" file_path = '/modul_zoo/static/imagen/zoo.jpg'/>
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_content">
@@ -145,7 +145,7 @@
             <field name="arch" type="xml">
                 <kanban>
                     <field name="name"/>
-                    <field name="image" widget="image" class="oe_kanban_image" file_path = '/modul_zoo/imagen/animal.jpg'/>
+                    <field name="image" widget="image" class="oe_kanban_image" file_path = '/modul_zoo/static/imagen/animal.jpg'/>
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_content">
@@ -219,7 +219,7 @@
             <field name="arch" type="xml">
                 <kanban>
                     <field name="name"/>
-                    <field name="image" widget="image" class="oe_kanban_image" file_path = '/modul_zoo/imagen/especie.jpg'/>
+                    <field name="image" widget="image" class="oe_kanban_image" file_path = '/modul_zoo/static/imagen/especie.jpg'/>
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_content">

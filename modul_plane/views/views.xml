@@ -78,6 +78,7 @@
             <field name="arch" type="xml">
                 <kanban>
                     <field name="nom"/>
+                    <field name="image" widget="image" class="oe_kanban_image" file_path = '/modul_plane/static/imagen/a.jpg'/>
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_content">
@@ -95,6 +96,7 @@
                                             <field name="longitud"/>
                                             <field name="aeroportDesti_ids"/>
                                             <field name="aeroportOrigen_ids"/>
+                                            <img t-if="record.image" t-att-src="record.image"/>
                                         </div>
                                     </div>
                                 </div>
@@ -152,6 +154,7 @@
             <field name="arch" type="xml">
                 <kanban>
                     <field name="name"/>
+                    <field name="image" widget="image" class="oe_kanban_image" file_path = '/modul_plane/static/imagen/v.jpg'/>
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_content">
@@ -169,6 +172,7 @@
                                             <field name="dataArrivada"/>
                                             <field name="pilot_id"/>
                                             <field name="avio_id"/>
+                                            <img t-if="record.image" t-att-src="record.image"/>
                                         </div>
                                     </div>
                                 </div>
@@ -224,6 +228,7 @@
             <field name="arch" type="xml">
                 <kanban>
                     <field name="model"/>
+                    <field name="image" widget="image" class="oe_kanban_image" file_path = '/modul_plane/static/imagen/a.jpg'/>
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_content">
@@ -238,6 +243,7 @@
                                             <field name="model"/>
                                             <field name="maxVel"/>
                                             <field name="vol_ids"/>
+                                            <img t-if="record.image" t-att-src="record.image"/>
                                         </div>
                                     </div>
                                 </div>
@@ -294,6 +300,7 @@
             <field name="arch" type="xml">
                 <kanban>
                     <field name="nom"/>
+                    <field name="image" widget="image" class="oe_kanban_image" file_path = '/modul_plane/static/imagen/p.jpg'/>
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_content">
@@ -310,6 +317,7 @@
                                             <field name="telf"/>
                                             <field name="email"/>
                                             <field name="vol_ids"/>
+                                            <img t-if="record.image" t-att-src="record.image"/>
                                         </div>
                                     </div>
                                 </div>
