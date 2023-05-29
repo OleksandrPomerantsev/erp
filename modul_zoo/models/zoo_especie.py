@@ -7,6 +7,7 @@ class zoo_especie(models.Model):
     nomCientific = fields.Char('Nom cientific')
     nomVulgar = fields.Char('Nom vulgar')
     animals_ids = fields.One2many('zoo.animal','especie_id',String='Animals')
+    image = fields.Binary(string="Imagen")
     def _get_name(self):
         for record in self:
             record.name = str(record.nomVulgar) + " " + str(record.nomCientific)

@@ -70,6 +70,7 @@
             <field name="arch" type="xml">
                 <kanban>
                     <field name="name"/>
+                    <field name="image" widget="image" class="oe_kanban_image" file_path = '/modul_zoo/imagen/zoo.jpg'/>
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_content">
@@ -85,6 +86,7 @@
                                             <field name="pais"/>
                                             <field name="grandaria"/>
                                             <field name="animals_ids"/>
+                                            <img t-if="record.image" t-att-src="record.image"/>
                                         </div>
                                     </div>
                                 </div>
@@ -143,6 +145,7 @@
             <field name="arch" type="xml">
                 <kanban>
                     <field name="name"/>
+                    <field name="image" widget="image" class="oe_kanban_image" file_path = '/modul_zoo/imagen/animal.jpg'/>
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_content">
@@ -159,6 +162,7 @@
                                             <field name="continentOrigen"/>
                                             <field name="zoo_id"/>
                                             <field name="especie_id" />	
+                                            <img t-if="record.image" t-att-src="record.image"/>
                                         </div>
                                     </div>
                                 </div>
@@ -215,6 +219,7 @@
             <field name="arch" type="xml">
                 <kanban>
                     <field name="name"/>
+                    <field name="image" widget="image" class="oe_kanban_image" file_path = '/modul_zoo/imagen/especie.jpg'/>
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_content">
@@ -230,6 +235,7 @@
                                             <field name="perill"/>
                                             <field name="familia"/>
                                             <field name="animals_ids"/>
+                                            <img t-if="record.image" t-att-src="record.image"/>
                                         </div>
                                     </div>
                                 </div>
