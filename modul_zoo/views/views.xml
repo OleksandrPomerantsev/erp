@@ -47,10 +47,11 @@
                     <sheet>
                         <group col="12">
                             <group colspan="6">
-                                <field name="nom" />
-                                <field name="ciutat" />	
+                                <field name="image" class="oe_avatar" widget="image"/>
                             </group>
                             <group colspan="6">
+                                <field name="nom" />
+                                <field name="ciutat" />
                                 <field name="pais" />
                                 <field name="grandaria" />	
                             </group>
@@ -70,24 +71,25 @@
             <field name="arch" type="xml">
                 <kanban>
                     <field name="name"/>
-                    <field name="image" widget="image" class="oe_kanban_image" file_path = '/modul_zoo/static/imagen/zoo.jpg'/>
+                    <field name="image"/>
+                    <field name="id"/>
                     <templates>
                         <t t-name="kanban-box">
-                            <div class="oe_kanban_content">
-                                <div class="oe_kanban_card">
-                                    <div class="oe_kanban_card_content">
-                                        <div class="oe_kanban_card_header">
-                                            <div class="oe_kanban_card_title">
-                                                <field name="nom"/>
-                                            </div>
+                            <div class="oe_kanban_content o_kanban_record_has_image_fill">
+                                <div class="oe_kanban_card o_kanban_image d-none d-md-block" 
+                                    t-attf-style="background-image:url('#{kanban_image('plane.zoo', 'image', record.id.raw_value, placeholder)}')">
+                                </div>
+                                <div class="oe_kanban_card_content">
+                                    <div class="oe_kanban_card_header">
+                                        <div class="oe_kanban_card_title">
+                                            <field name="nom"/>
                                         </div>
-                                        <div class="oe_kanban_card_body">
-                                            <field name="ciutat"/>
-                                            <field name="pais"/>
-                                            <field name="grandaria"/>
-                                            <field name="animals_ids"/>
-                                            <img t-if="record.image" t-att-src="record.image"/>
-                                        </div>
+                                    </div>
+                                    <div class="oe_kanban_card_body">
+                                        <field name="ciutat"/>
+                                        <field name="pais"/>
+                                        <field name="grandaria"/>
+                                        <field name="animals_ids"/>
                                     </div>
                                 </div>
                             </div>
@@ -121,10 +123,11 @@
                     <sheet>
                         <group col="12">
                             <group colspan="6">
-                                <field name="sexe"/>
-                                <field name="dataNaix"/>
+                                <field name="image" class="oe_avatar" widget="image"/>
                             </group>
                             <group colspan="6">
+                                <field name="sexe"/>
+                                <field name="dataNaix"/>
                                 <field name="paisOrigen"/>
                                 <field name="continentOrigen"/>
                             </group>
@@ -145,25 +148,27 @@
             <field name="arch" type="xml">
                 <kanban>
                     <field name="name"/>
-                    <field name="image" widget="image" class="oe_kanban_image" file_path = '/modul_zoo/static/imagen/animal.jpg'/>
+                    <field name="image"/>
+                    <field name="id"/>
                     <templates>
                         <t t-name="kanban-box">
-                            <div class="oe_kanban_content">
-                                <div class="oe_kanban_card">
-                                    <div class="oe_kanban_card_content">
-                                        <div class="oe_kanban_card_header">
-                                            <div class="oe_kanban_card_title">
-                                                <field name="sexe"/>
-                                            </div>
+                            <div class="oe_kanban_content o_kanban_record_has_image_fill">
+                                <div class="oe_kanban_card o_kanban_image d-none d-md-block" 
+                                    t-attf-style="background-image:url('#{kanban_image('plane.animal', 'image', record.id.raw_value, placeholder)}')">
+                                </div>
+                                <div class="oe_kanban_card_content">
+                                    <div class="oe_kanban_card_header">
+                                        <div class="oe_kanban_card_title">
+                                            <field name="sexe"/>
                                         </div>
-                                        <div class="oe_kanban_card_body">
-                                            <field name="dataNaix"/>
-                                            <field name="paisOrigen"/>
-                                            <field name="continentOrigen"/>
-                                            <field name="zoo_id"/>
-                                            <field name="especie_id" />	
-                                            <img t-if="record.image" t-att-src="record.image"/>
-                                        </div>
+                                    </div>
+                                    <div class="oe_kanban_card_body">
+                                        <field name="dataNaix"/>
+                                        <field name="paisOrigen"/>
+                                        <field name="continentOrigen"/>
+                                        <field name="zoo_id"/>
+                                        <field name="especie_id" />	
+                                        <img t-if="record.image" t-att-src="record.image"/>
                                     </div>
                                 </div>
                             </div>
@@ -196,12 +201,13 @@
                     <sheet>
                         <group col="12">
                             <group colspan="6">
-                                <field name="nomVulgar"/>
-                                <field name="nomCientific" />
+                                <field name="image" class="oe_avatar" widget="image"/>
                             </group>
                             <group colspan="6">
+                                <field name="nomVulgar"/>
+                                <field name="nomCientific" />
                                 <field name="perill"/>
-                                <field name="familia"/>	
+                                <field name="familia"/>
                             </group>
                             <group colspan="12">
                                 <field name="animals_ids" />
@@ -219,24 +225,25 @@
             <field name="arch" type="xml">
                 <kanban>
                     <field name="name"/>
-                    <field name="image" widget="image" class="oe_kanban_image" file_path = '/modul_zoo/static/imagen/especie.jpg'/>
+                    <field name="image"/>
+                    <field name="id"/>
                     <templates>
                         <t t-name="kanban-box">
-                            <div class="oe_kanban_content">
-                                <div class="oe_kanban_card">
-                                    <div class="oe_kanban_card_content">
-                                        <div class="oe_kanban_card_header">
-                                            <div class="oe_kanban_card_title">
-                                                <field name="nomCientific"/>
-                                            </div>
+                            <div class="oe_kanban_content o_kanban_record_has_image_fill">
+                                <div class="oe_kanban_card o_kanban_image d-none d-md-block" 
+                                    t-attf-style="background-image:url('#{kanban_image('plane.especie', 'image', record.id.raw_value, placeholder)}')">
+                                </div>
+                                <div class="oe_kanban_card_content">
+                                    <div class="oe_kanban_card_header">
+                                        <div class="oe_kanban_card_title">
+                                            <field name="nomCientific"/>
                                         </div>
-                                        <div class="oe_kanban_card_body">
-                                            <field name="nomVulgar"/>
-                                            <field name="perill"/>
-                                            <field name="familia"/>
-                                            <field name="animals_ids"/>
-                                            <img t-if="record.image" t-att-src="record.image"/>
-                                        </div>
+                                    </div>
+                                    <div class="oe_kanban_card_body">
+                                        <field name="nomVulgar"/>
+                                        <field name="perill"/>
+                                        <field name="familia"/>
+                                        <field name="animals_ids"/>
                                     </div>
                                 </div>
                             </div>

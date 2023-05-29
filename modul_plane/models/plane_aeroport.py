@@ -3,7 +3,6 @@ class plane_aeroport(models.Model):
     _name = 'plane.aeroport'
     name = fields.Char(compute='_get_name',string="Nom complet",readonly='True',store=False)
     nom = fields.Char('Nom', required=True)
-    imatge = fields.Char('Imatge')
     ciutat = fields.Char('Ciutat', required=True)
     pais = fields.Char('Pais', required=True)
     latitud = fields.Float('Latitud', required=True)

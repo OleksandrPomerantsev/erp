@@ -53,11 +53,12 @@
                     <sheet>
                         <group col="12">
                             <group colspan="6">
+                                <field name="image" class="oe_avatar" widget="image"/>
+                            </group>
+                            <group colspan="6">
                                 <field name="nom"/>
                                 <field name="ciutat"/>
                                 <field name="pais"/>
-                            </group>
-                            <group colspan="6">
                                 <field name="latitud"/>
                                 <field name="longitud"/>
                             </group>
@@ -65,6 +66,7 @@
                                 <field name="aeroportDesti_ids"/>
                                 <field name="aeroportOrigen_ids"/>
                             </group>
+                            
                         </group>
                     </sheet>
                 </form>
@@ -78,26 +80,27 @@
             <field name="arch" type="xml">
                 <kanban>
                     <field name="nom"/>
-                    <field name="image" widget="image" class="oe_kanban_image" file_path = '/modul_plane/static/imagen/a.jpg'/>
+                    <field name="image"/>
+                    <field name="id"/>
                     <templates>
                         <t t-name="kanban-box">
-                            <div class="oe_kanban_content">
-                                <div class="oe_kanban_card">
-                                    <div class="oe_kanban_card_content">
-                                        <div class="oe_kanban_card_header">
-                                            <div class="oe_kanban_card_title">
-                                                <field name="nom"/>
-                                            </div>
+                            <div class="oe_kanban_content o_kanban_record_has_image_fill">
+                                <div class="oe_kanban_card o_kanban_image d-none d-md-block" 
+                                    t-attf-style="background-image:url('#{kanban_image('plane.aeroport', 'image', record.id.raw_value, placeholder)}')">
+                                </div>
+                                <div class="oe_kanban_card_content">
+                                    <div class="oe_kanban_card_header">
+                                        <div class="oe_kanban_card_title">
+                                            <field name="nom"/>
                                         </div>
-                                        <div class="oe_kanban_card_body">
-                                            <field name="ciutat"/>
-                                            <field name="pais"/>
-                                            <field name="latitud"/>
-                                            <field name="longitud"/>
-                                            <field name="aeroportDesti_ids"/>
-                                            <field name="aeroportOrigen_ids"/>
-                                            <img t-if="record.image" t-att-src="record.image"/>
-                                        </div>
+                                    </div>
+                                    <div class="oe_kanban_card_body">
+                                        <field name="ciutat"/>
+                                        <field name="pais"/>
+                                        <field name="latitud"/>
+                                        <field name="longitud"/>
+                                        <field name="aeroportDesti_ids"/>
+                                        <field name="aeroportOrigen_ids"/>        
                                     </div>
                                 </div>
                             </div>
@@ -129,11 +132,12 @@
                     <sheet>
                         <group col="12">
                             <group colspan="6">
+                                <field name="image" class="oe_avatar" widget="image"/>
+                            </group>
+                            <group colspan="6">
                                 <field name="aeroportDesti"/>
                                 <field name="aeroportOrigen"/>
                                 <field name="passatgers" />
-                            </group>
-                            <group colspan="6">
                                 <field name="dataSortida"/>
                                 <field name="dataArrivada"/>
                             </group>
@@ -154,26 +158,27 @@
             <field name="arch" type="xml">
                 <kanban>
                     <field name="name"/>
-                    <field name="image" widget="image" class="oe_kanban_image" file_path = '/modul_plane/static/imagen/v.jpg'/>
+                    <field name="image"/>
+                    <field name="id"/>
                     <templates>
                         <t t-name="kanban-box">
-                            <div class="oe_kanban_content">
-                                <div class="oe_kanban_card">
-                                    <div class="oe_kanban_card_content">
-                                        <div class="oe_kanban_card_header">
-                                            <div class="oe_kanban_card_title">
-                                                <field name="aeroportDesti"/>
-                                            </div>
+                            <div class="oe_kanban_content o_kanban_record_has_image_fill">
+                                <div class="oe_kanban_card o_kanban_image d-none d-md-block" 
+                                    t-attf-style="background-image:url('#{kanban_image('plane.vol', 'image', record.id.raw_value, placeholder)}')">
+                                </div>
+                                <div class="oe_kanban_card_content">
+                                    <div class="oe_kanban_card_header">
+                                        <div class="oe_kanban_card_title">
+                                            <field name="aeroportDesti"/>
                                         </div>
-                                        <div class="oe_kanban_card_body">
-                                            <field name="aeroportOrigen"/>
-                                            <field name="passatgers"/>
-                                            <field name="dataSortida"/>
-                                            <field name="dataArrivada"/>
-                                            <field name="pilot_id"/>
-                                            <field name="avio_id"/>
-                                            <img t-if="record.image" t-att-src="record.image"/>
-                                        </div>
+                                    </div>
+                                    <div class="oe_kanban_card_body">
+                                        <field name="aeroportOrigen"/>
+                                        <field name="passatgers"/>
+                                        <field name="dataSortida"/>
+                                        <field name="dataArrivada"/>
+                                        <field name="pilot_id"/>
+                                        <field name="avio_id"/>
                                     </div>
                                 </div>
                             </div>
@@ -206,10 +211,11 @@
                     <sheet>
                         <group col="12">
                             <group colspan="6">
-                                <field name="marca"/>
-                                <field name="model"/>
+                                <field name="image" class="oe_avatar" widget="image"/>
                             </group>
                             <group colspan="6">
+                                <field name="marca"/>
+                                <field name="model"/>
                                 <field name="maxVel"/>
                             </group>
                             <group colspan="12">
@@ -228,23 +234,24 @@
             <field name="arch" type="xml">
                 <kanban>
                     <field name="model"/>
-                    <field name="image" widget="image" class="oe_kanban_image" file_path = '/modul_plane/static/imagen/a.jpg'/>
+                    <field name="image"/>
+                    <field name="id"/>
                     <templates>
                         <t t-name="kanban-box">
-                            <div class="oe_kanban_content">
-                                <div class="oe_kanban_card">
-                                    <div class="oe_kanban_card_content">
-                                        <div class="oe_kanban_card_header">
-                                            <div class="oe_kanban_card_title">
-                                                <field name="marca"/>
-                                            </div>
+                            <div class="oe_kanban_content o_kanban_record_has_image_fill">
+                                <div class="oe_kanban_card o_kanban_image d-none d-md-block" 
+                                    t-attf-style="background-image:url('#{kanban_image('plane.avio', 'image', record.id.raw_value, placeholder)}')">
+                                </div>
+                                <div class="oe_kanban_card_content">
+                                    <div class="oe_kanban_card_header">
+                                        <div class="oe_kanban_card_title">
+                                            <field name="marca"/>
                                         </div>
-                                        <div class="oe_kanban_card_body">
-                                            <field name="model"/>
-                                            <field name="maxVel"/>
-                                            <field name="vol_ids"/>
-                                            <img t-if="record.image" t-att-src="record.image"/>
-                                        </div>
+                                    </div>
+                                    <div class="oe_kanban_card_body">
+                                        <field name="model"/>
+                                        <field name="maxVel"/>
+                                        <field name="vol_ids"/>  
                                     </div>
                                 </div>
                             </div>
@@ -276,11 +283,12 @@
                     <sheet>
                         <group col="12">
                             <group colspan="6">
+                                <field name="image" class="oe_avatar" widget="image"/>
+                            </group>
+                            <group colspan="6">
                                 <field name="nom"/>
                                 <field name="cognoms"/>	
                                 <field name="nif"/>
-                            </group>
-                            <group colspan="6">
                                 <field name="telf"/>
                                 <field name="email"/>
                             </group>
@@ -300,25 +308,26 @@
             <field name="arch" type="xml">
                 <kanban>
                     <field name="nom"/>
-                    <field name="image" widget="image" class="oe_kanban_image" file_path = '/modul_plane/static/imagen/p.jpg'/>
+                    <field name="image"/>
+                    <field name="id"/>
                     <templates>
                         <t t-name="kanban-box">
-                            <div class="oe_kanban_content">
-                                <div class="oe_kanban_card">
-                                    <div class="oe_kanban_card_content">
-                                        <div class="oe_kanban_card_header">
-                                            <div class="oe_kanban_card_title">
-                                                <field name="nom"/>
-                                            </div>
+                            <div class="oe_kanban_content o_kanban_record_has_image_fill">
+                                <div class="oe_kanban_card o_kanban_image d-none d-md-block" 
+                                    t-attf-style="background-image:url('#{kanban_image('plane.pilot', 'image', record.id.raw_value, placeholder)}')">
+                                </div>
+                                <div class="oe_kanban_card_content">
+                                    <div class="oe_kanban_card_header">
+                                        <div class="oe_kanban_card_title">
+                                            <field name="nom"/>
                                         </div>
-                                        <div class="oe_kanban_card_body">
-                                            <field name="cognoms"/>
-                                            <field name="nif"/>
-                                            <field name="telf"/>
-                                            <field name="email"/>
-                                            <field name="vol_ids"/>
-                                            <img t-if="record.image" t-att-src="record.image"/>
-                                        </div>
+                                    </div>
+                                    <div class="oe_kanban_card_body">
+                                        <field name="cognoms"/>
+                                        <field name="nif"/>
+                                        <field name="telf"/>
+                                        <field name="email"/>
+                                        <field name="vol_ids"/>
                                     </div>
                                 </div>
                             </div>
@@ -327,7 +336,5 @@
                 </kanban>
             </field>
         </record>
-
-
     </data>
 </odoo>
